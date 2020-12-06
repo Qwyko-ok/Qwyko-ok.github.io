@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+            background-color: black;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .cube{
+            width: 400px;
+            height: 400px;
+            margin: 200px auto 0;
+            /* 设置3d变形效果 */
+            transform-style: preserve-3d;
+            animation: rotate linear infinite 30s;
+        }
+
+        .cube > div{
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            opacity: 0.7;
+            position: absolute;
+        }
+
+        img{
+            vertical-align: top;
+        }
+
+        .one {
+            transform: rotateY(90deg) translateZ(150px);
+        }
+
+        .two {
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+
+        .three {
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        .four {
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+        .five {
+            transform:rotateY(180deg) translateZ(150px);
+        }
+
+        .six {
+            transform: rotateY(0deg) translateZ(150px);
+        }
+
+        @keyframes rotate {
+            form{
+                transform:rotateX(0) rotateZ(0)
+            }
+
+            to{
+                transform:rotateX(1turn) rotateZ(1turn)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="one">
+            <img src="./img/nu1.jpeg" width="300">
+        </div>
+        <div class="two">
+            <img src="./img/nu7.jpeg" width="300">
+        </div>
+        <div class="three">
+            <img src="./img/nu3.jpeg" width="300">
+        </div>
+        <div class="four">
+            <img src="./img/nu9.jpeg" width="300">
+        </div>
+        <div class="five">
+            <img src="./img/nu5.jpeg" width="300">
+        </div>
+        <div class="six">
+            <img src="./img/nu6.jpeg" width="300">
+        </div>
+    </div>
+</body>
+</html>
